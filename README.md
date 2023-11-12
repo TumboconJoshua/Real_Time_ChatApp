@@ -19,12 +19,12 @@ server_socket: Server_socket refers to the main socket that connects between the
 
 Methods:
 
-1. __init__(self, host, port): It is the constructor which initializes a server instance given a host and port.
-2. start(self): The server socket is initialized in the start method followed by binding it to the mentioned host and port, and finally starting to listen for any incoming connections. On connection by a client, one thread is started to take care of it.
-3. accept_connections(self): This is an iterative method that will listen on new incoming client connections that may have existed before. A different thread handles each connection so that many clients can communicate concurrently.
-4. handle_client(self, client_socket, client_address): Handle_client is a function that deals with communication with a particular client. The server repeatedly monitors messages sent by the client, processes them, and publishes it on a broad scale of clients that are online.
-5. disconnect_client(self, client_socket, client_address): This method is known as when a client breaks off and does some clean-up before removing the client’s socket from the list of connected clients.
-6. broadcast_message(self, sender_socket, message): The broad-scast_message method is a function that makes one client send a message into all the other clients but the sender.
+1. **__init__(self, host, port):** It is the constructor which initializes a server instance given a host and port.
+2. **start(self):** The server socket is initialized in the start method followed by binding it to the mentioned host and port, and finally starting to listen for any incoming connections. On connection by a client, one thread is started to take care of it.
+3. **accept_connections(self):** This is an iterative method that will listen on new incoming client connections that may have existed before. A different thread handles each connection so that many clients can communicate concurrently.
+4. **handle_client(self, client_socket, client_address):** Handle_client is a function that deals with communication with a particular client. The server repeatedly monitors messages sent by the client, processes them, and publishes it on a broad scale of clients that are online.
+5. **disconnect_client(self, client_socket, client_address):** This method is known as when a client breaks off and does some clean-up before removing the client’s socket from the list of connected clients.
+6. **broadcast_message(self, sender_socket, message):** The broad-scast_message method is a function that makes one client send a message into all the other clients but the sender.
 
 **Script Usage**
 

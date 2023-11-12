@@ -1,14 +1,14 @@
-Simple Real Time Chat App using Python Sockets + TKinter
+**Simple Real Time Chat App using Python Sockets + TKinter**
 
 **Introduction**
 
 This is a simple python script used to configure a chat server for inter-client communication over a network. This is achieved by integrating the socket and threading classes of python to control incoming connection, process client message and distribute it on every connected client. This document explains the nature of the script, its operations, and its uses.
 
-Script Structure
+**Script Structure**
 
 The code begins by importing the required modules: socket and threading. These involve some of the most crucial aspects regarding the management of network communication and the establishment of many connections happening concurrently. A class named ChatServer encompasses the essence of the script.
 
-ChatServer Class
+**ChatServer Class**
 
 Properties:
 
@@ -26,11 +26,11 @@ Methods:
 5. disconnect_client(self, client_socket, client_address): This method is known as when a client breaks off and does some clean-up before removing the client’s socket from the list of connected clients.
 6. broadcast_message(self, sender_socket, message): The broad-scast_message method is a function that makes one client send a message into all the other clients but the sender.
 
-Script Usage
+**Script Usage**
 
 The script’s main execution is in the final section with the if __name__ == “__main__” block. Here you give the host IP address (host_ip) and also provide the port number (port_number) of the server. Once these parameters are defined, the ChatServer is subsequently created and the start call made to commence the server.
 
-How it Works
+**How it Works**
 
 The chat server operates as follows:
 
@@ -41,15 +41,15 @@ The disconnect_client function takes away the client socket from the set of conn
 
 The code also encompasses the client side functionality on top of the server side implementation. The following paragraph describes the client-side script that makes a connection to the chatting server and creates a GUI for interactive messages, utilizing the Tkinter library.
 
-Client-Side Code Overview
+**Client-Side Code Overview**
 
 The client-side code is mainly involved in providing a user interface for users to communicate with the servers and the other connected clients. Here's a breakdown of the functionalities:
 
-Establishing Connection
+**Establishing Connection**
 
 A client or client or client-side script initializes a socket that is subsequently connected to the specified server’s or client’s IP address/port. It means that the client can communicate with the server via this connection.
 
-Tkinter GUI Creation
+**Tkinter GUI Creation**
 
 The script utilizes Tkinter to create a GUI window that consists of several components:
 
@@ -59,19 +59,19 @@ Message Entry Field: Enables one give their message to a server.
 
 Send Button: Sends messages sent into the text field.
 
-Sending Messages
+**Sending Messages**
 
 The send_message operation implements the procedure for transmitting messages from an end to a point. The send button gets the message from the entry field, posts that message into the chat window, ships to the server, and finally empties the entry field ready for a new one.
 
-Receiving Messages
+**Receiving Messages**
 
 The receive_message function constantly monitors messages from the server. It shows on a chat window any message coming from the server or another client connected.
 
-Threading
+**Threading**
 
 Thread handling is used by the code in taking control of messages arriving in the background. Creates another thread called recv_thread which is always listening to messages and never blocks the main GUI operation for allowing of continuous message reception.
 
-Client-Server Interaction
+**Client-Server Interaction**
 
 Client- or server-side scripts also known as web scripts interact each other exchanging data messages (Send or receive). The server-side logic ensures that messages received from the client are passed onto the server, which subsequently forwards them to all the connected clients. In a similar way, the client also receives messages only that the messages are sent by the server on behalf of other clients.
 

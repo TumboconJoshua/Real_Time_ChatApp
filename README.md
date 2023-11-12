@@ -1,4 +1,5 @@
 Simple Real Time Chat App using Python Sockets + TKinter
+
 **Introduction**
 This is a simple python script used to configure a chat server for inter-client communication over a network. This is achieved by integrating the socket and threading classes of python to control incoming connection, process client message and distribute it on every connected client. This document explains the nature of the script, its operations, and its uses.
 
